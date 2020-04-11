@@ -1,5 +1,10 @@
 <% provide(:title, "Home") %>
-<h1>JointPainJAMES</h1>
-<p>
-	Mobbin from the <a href="https://www.youtube.com/watch?v=0jz0GAFNNIo&t=55">6</a>
-</p>
+<div class="center jumbotron">
+  <h1>JointPainJAMES</h1>
+  <p>
+    Mobbin from the <a href="https://www.youtube.com/watch?v=0jz0GAFNNIo&t=55">6</a>
+  </p>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<%= link_to image_tag("flank.jpg", alt: "our lord", width: "200"), "https://vimeo.com/179791907" %>
