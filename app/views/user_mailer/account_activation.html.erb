@@ -1,0 +1,8 @@
+<h1>jointpainJAMES</h1>
+
+<p>Yo <%= @user.name %></p>
+
+<p>how you livin? Wanna officially join this shit? Click this link ;)
+</p>
+
+<%= link_to "Activate lmao", edit_account_activation_url(@user.activation_token, email: @user.email) %>

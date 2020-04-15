@@ -1,0 +1,5 @@
+Yo <%= @user.name %>
+
+how you livin? Wanna officially join this shit? Click this link ;)
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
