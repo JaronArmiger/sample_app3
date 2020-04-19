@@ -1,10 +1,28 @@
 <% provide(:title, "Home") %>
-<div class="center jumbotron">
-  <h1>JointPainJAMES</h1>
-  <p>
-    Mobbin from the <a href="https://www.youtube.com/watch?v=0jz0GAFNNIo&t=55">6</a>
-  </p>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
 
-<%= link_to image_tag("flank.jpg", alt: "our lord", width: "200"), "https://vimeo.com/179791907" %>
+<% if logged_in? %>
+  <div class="row">
+  	<aside class="col-md-4">
+  		<section class="user_info">
+  			<%= render 'shared/user_info' %>
+  		</section>
+  		<section class="micropost_form">
+  			<%= render 'shared/micropost_form' %>
+  		</section>
+  	</aside>
+    <div class="col-md-8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+	<div class="center jumbotron">
+	  <h1>JointPainJAMES</h1>
+	  <p>
+	    Mobbin from the <a href="https://www.youtube.com/watch?v=0jz0GAFNNIo&t=55">6</a>
+	  </p>
+	  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+	</div>
+
+	<%= link_to image_tag("flank.jpg", alt: "our lord", width: "200"), "https://vimeo.com/179791907" %>
+<% end %>

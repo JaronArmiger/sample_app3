@@ -1,0 +1,36 @@
+festeggiare:
+  content: "divientiamo sciocchi"
+  created_at: <%= 10.minutes.ago %>
+  user: alfonso
+
+la_festa:
+  content: "sei stupido?"
+  created_at: <%= 3.years.ago %>
+  user: alfonso
+
+una_rapina:
+  content: "hai soldi?"
+  created_at: <%= 2.hours.ago %>
+  user: alfonso
+
+most_recent:
+  content: "che cazzo stai guardando?"
+  created_at: <%= Time.zone.now %>
+  user: alfonso
+
+la_ferme:
+  content: "es-tu alle a la ferme?"
+  created_at: <%= 5.days.ago %>
+  user: ursula
+
+le_centre:
+  content: "j'ai fait du shopping"
+  created_at: <%= 7.weeks.ago %>
+  user: ursula
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 42.days.ago %>
+  user: alfonso
+<% end %>

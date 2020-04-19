@@ -1,0 +1,8 @@
+<% if @feed_items.any? %>
+  <ol class="microposts">
+  	<%# this renders each micropost with the _micropost partial %>
+  	<%# rails knows to do this because each element of @feed_items has class Micropost %>
+  	<%= render @feed_items %>
+  </ol>
+  <%= will_paginate @feed_items, params: { controller: :static_pages, action: :home} %>
+<% end %>
