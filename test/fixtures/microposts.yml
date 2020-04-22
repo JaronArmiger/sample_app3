@@ -28,6 +28,16 @@ le_centre:
   created_at: <%= 7.weeks.ago %>
   user: ursula
 
+le_reve:
+  content: "je vois des paturages de pourpre"
+  created_at: <%= 25.days.ago %>
+  user: francoise
+
+le_cauchemar:
+  content: "j'ai ete pourchasse par un elephant saignant"
+  created_at: <%= 3.years.ago %>
+  user: francoise
+
 <% 30.times do |n| %>
 micropost_<%= n %>:
   content: <%= Faker::Lorem.sentence(word_count: 5) %>

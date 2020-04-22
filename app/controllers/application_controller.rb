@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 	private
 
 		# Confirms a user is logged in
-	def logged_in_user
+	  def logged_in_user
       unless logged_in?
         store_location # puts :forwarding_url in session hash
         flash[:danger] = "you gotta be logged to do that bruh"

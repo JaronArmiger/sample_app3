@@ -1,0 +1,8 @@
+<%# remote attribute enables ajax %>
+<%# this sets the var data-remote="true" within the html form tag %>
+<%# which tells Rails to allow the form to be handled by JavaScript %>
+
+<%= form_with(model: current_user.active_relationships.build, remote: true) do |f| %>
+  <div><%= hidden_field_tag :followed_id, @user.id %></div>
+  <%= f.submit "Follow", class: "btn btn-primary" %>
+<% end %>

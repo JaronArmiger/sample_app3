@@ -1,0 +1,16 @@
+
+un:
+  follower: alfonso
+  followed: ursula
+
+deux:
+  follower: alfonso
+  followed: amedeo
+
+trois:
+  follower: ursula
+  followed: alfonso
+
+quatre:
+  follower: amedeo
+  followed: alfonso
