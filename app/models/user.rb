@@ -79,6 +79,11 @@ class User < ApplicationRecord
 		Micropost.joins(user: :followers).where(
 						"relationships.follower_id = :id
 						 or microposts.user_id = :id", { id: id })
+		# produces this SQL:
+		# SELECT COUNT(*) FROM "microposts" INNER JOIN "users" ON "users"."id" = "microposts"."user_id" 
+		# INNER JOIN "relationships" ON "relationships"."followed_id" = "users"."id" 
+		# INNER JOIN "users" "followers_users" ON "followers_users"."id" = "relationships"."follower_id" 
+		# WHERE (relationships.follower_id = 1 or microposts.user_id = 1)
 	end
 
 	def follow(other_user)
